@@ -1,0 +1,321 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #114d5c;
+    --bg-color: rgb(242, 242, 242);
+}
+
+body {
+    background-color: rgb(242, 242, 242);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-family: "Poetsen One", sans-serif;
+}
+
+.logo span {
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 1em;
+    font-weight: 600;
+    color: rgb(25, 25, 25);
+    font-family: "PT Serif", serif;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+nav ul li:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    animation: nav-border 0.5s ease-in-out forwards;
+}
+
+@keyframes nav-border {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+header .contact-btn button {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "PT Serif", serif;
+}
+
+header .contact-btn button:hover {
+    opacity: 0.8;
+    transition: .3s ease-in-out;
+}
+
+header .menu-toggler {
+    display: none;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 0 2em;
+}
+
+.introduction {
+    width: 70%;
+    flex: 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "PT Serif", serif;
+}
+
+.introduction .name {
+    font-weight: 800;
+    font-size: 2.3rem;
+}
+
+.introduction .name span {
+    color: var(--primary-color);
+    font-family: "Poetsen One", sans-serif;
+}
+
+.introduction .profession {
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-bottom: 1em;
+}
+
+.introduction .description {
+    color: rgb(25, 25, 25);
+    line-height: 1.5rem;
+    font-family: "Philosopher", sans-serif;
+}
+
+.button-group {
+    margin: 2em 0;
+}
+
+.button-group button {
+    margin-right: 1em;
+    cursor: pointer;
+    font-family: "PT Serif", serif;
+}
+
+.button-group button:hover {
+    scale: 1.1;
+    transition: .5s ease-in-out;
+}
+
+.button-group .hire-me {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+}
+
+.button-group .gallery {
+    border: 2px solid var(--primary-color);
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.social-icons {
+    margin-top: 1em;
+    display: inline-block;
+}
+
+.social-icons .fa-brands {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 8px;
+    margin-right: .8em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.social-icons .fa-brands:hover {
+    scale: 1.1;
+    color: white;
+    background-color: var(--primary-color);
+    transition: .5s ease-in-out;
+}
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 80%;
+}
+
+.profile-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -50%;
+    background-color: var(--primary-color);
+    height: 120%;
+    z-index: -1;
+    transform: rotate(-60deg);
+}
+
+.profile-image::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    bottom: 50%;
+    left: 50%;
+    right: -80%;
+    height:100%;
+    background-color: var(--primary-color);
+    background-color: rgb(236, 37, 100);
+    z-index: -1;
+    transform: rotate(-60deg);
+}
+
+/* .hero-section {
+    background-color: rgba(172, 255, 47, 0.475);
+
+    background-color: rgba(172, 255, 134, 0.475);
+
+    background-color: rgba(111, 224, 198, 0.2);
+    background-color: rgba(117, 236, 187, 0.2);
+} */
+
+.section-break {
+    width: 100%;
+    height: 50px;
+    background-color: var(--bg-color);
+
+}
+
+@media (max-width: 1100px) {
+    .profile-image img {
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    header {
+        padding: 1em 1em;
+        position: relative;
+    }
+
+    header .logo {
+        order: 2;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header .menu-toggler {
+        display: flex;
+        order: -1;
+    }
+
+    header nav.show {
+        display: block;
+        position: absolute;
+        background-color: var(--bg-color);
+        top: 100%;
+        left: 0;
+        min-width: 50%;
+        border-radius: 0 0 8px 0;
+        animation: show-nav 0.5s ease-in-out;
+    }
+
+    header nav li {
+        display: block;
+        padding: 1em 0;
+    }
+
+    @keyframes show-nav {
+        from {
+            transform: translateX(-100%);
+        }
+
+        to {
+            transform: translateX(0%);
+        }
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 0 1em;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    .introduction {
+        width: 100%;
+    }
+
+    .profile-image img {
+        width: 60%;
+        padding-top: 2em;
+    }
+}
+
+@media (max-width: 460px) {
+    header nav.toggle {
+        min-width: 80%;
+    }
+}
