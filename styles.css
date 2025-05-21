@@ -34,10 +34,11 @@ header {
 }
 
 .logo {
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-weight: 800;
+    font-size: 1.8rem;
     color: var(--primary-color);
     font-family: "Poetsen One", sans-serif;
+    font-family: "Comic Neue", cursive;
 }
 
 .logo span {
@@ -58,6 +59,7 @@ nav ul li {
     font-weight: 600;
     color: rgb(25, 25, 25);
     font-family: "PT Serif", serif;
+    font-family: "Comic Neue", cursive;
     position: relative;
     padding-bottom: 2px;
 }
@@ -120,6 +122,7 @@ header .menu-toggler {
     flex-direction: column;
     justify-content: center;
     font-family: "PT Serif", serif;
+    font-family: "Comic Neue", cursive;
     padding: 2em;
 }
 
@@ -144,6 +147,7 @@ header .menu-toggler {
     color: rgb(25, 25, 25);
     line-height: 1.5rem;
     font-family: "Philosopher", sans-serif;
+    font-family: "Comic Neue", cursive;
 }
 
 .button-group {
@@ -170,6 +174,7 @@ header .menu-toggler {
     margin-right: 1em;
     cursor: pointer;
     font-family: "PT Serif", serif;
+    font-family: "Comic Neue", cursive;
 }
 
 .button-group .outlined-btn {
@@ -251,13 +256,20 @@ header .menu-toggler {
     right: 0;
     height: 50px;
     background-color: var(--primary-color);
+    background-color: rgb(240, 184, 202);
+    background-color: rgb(236, 37, 100);
+    background-color: var(--bg-color);
     margin: 0 10px;
     position: relative;
     border-radius: 0 0 8px 8px;
+    border-bottom: 2px solid var(--primary-color);
+    border-left: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+    border-top: 2px solid var(--primary-color);
 }
 
 .section-break::after {
-    content: 'For the love of ... light ... and ... action';
+    content: 'For the love of light, composition and motion';
     right: 0;
     left: 0;
     top: 0;
@@ -267,6 +279,8 @@ header .menu-toggler {
     margin: auto auto;
     background-color: var(--primary-color);
     background-color: rgb(240, 184, 202);
+    background-color: var(--primary-color);
+    color: white;
     z-index: 1;
     position: absolute;
     border-radius: 50px;
@@ -274,7 +288,83 @@ header .menu-toggler {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.8rem;
+}
+
+
+.follow-instagram {
+    margin: 3rem 10px;
+}
+
+.instagram-gallery {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    /* gap: 1em; */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    position: relative;
+    scroll-behavior: smooth;
+    /* padding: .5em; */
+}
+
+.instagram-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.instagram-image {
+    height: 200px;
+    width: auto;
+    position: relative;
+}
+
+.instagram-image img {
+    height: 100%;
+    width: 200px;
+    object-fit: cover;
+}
+
+.instagram-link {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+    z-index: 1;
+    font-size: 1rem;
+    color: white;
+}
+
+.instagram-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    text-decoration: none;
+    color: white;
+}
+
+.instagram-link i {
     font-size: 2rem;
+    color: white;
+}
+
+.instagram-image:hover>img {
+    scale: 0.9;
+    transition: 1s ease-in-out;
+}
+
+.instagram-image:hover .instagram-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s ease-in-out;
 }
 
 .services-section {
@@ -285,6 +375,7 @@ header .menu-toggler {
     padding: 1em;
     font-size: 2rem;
     font-family: "Poetsen One", sans-serif;
+    font-family: "Comic Neue", cursive;
     color: var(--primary-color);
 }
 
@@ -315,13 +406,15 @@ header .menu-toggler {
     margin: 1.5em 0;
     color: var(--primary-color);
     font-family: "Tangerine", cursive;
-    font-size: 1.5rem;
+    font-family: "Comic Neue", cursive;
+    font-size: 1rem;
     font-weight: 600;
 }
 
 .service-description p {
     font-family: "Philosopher", sans-serif;
     line-height: 1.5rem;
+    font-family: "Comic Neue", cursive;
 }
 
 .service-image {
@@ -333,6 +426,67 @@ header .menu-toggler {
     max-height: 350px;
     object-fit: cover;
     object-position: top;
+}
+
+.why-me-section {
+    background-color: var(--primary-color);
+    background-color: #093947;
+    color: rgb(242, 242, 242);
+    padding: 1em 2em;
+    margin: 0 10px;
+    border-radius: 8px;
+    font-family: "Comic Neue", cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.why-me-section>div:nth-child(1) {
+    width: 70%;
+    flex: 1 auto;
+    margin-bottom: 2rem;
+}
+
+.why-me-section>div:nth-child(2) {
+    width: 30%;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.why-me-section>div:nth-child(2)::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: rgb(236, 37, 100);
+    transform: rotate(100deg);
+    z-index: -1;
+}
+
+.why-me-section>div:nth-child(2)::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: white;
+    transform: rotate(-100deg);
+    z-index: -2;
+}
+
+.why-me-section>div:nth-child(2) img {
+    width: 80%;
+}
+
+
+
+.why-me-section p {
+    line-height: 1.8rem;
 }
 
 @media (max-width: 1100px) {
@@ -418,6 +572,17 @@ header .menu-toggler {
     }
 
     .service-image {
+        width: 100%;
+    }
+
+    .why-me-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1em;
+    }
+
+    .why-me-section>div:nth-child(1),
+    .why-me-section>div:nth-child(2) {
         width: 100%;
     }
 }

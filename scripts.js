@@ -24,3 +24,31 @@ function showSlides(){
   profileImages[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 4000);
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const profileContainer = document.querySelector(".instagram-gallery");
+    const scrollLeft = document.querySelector(".scroll-left");
+    const scrollRight = document.querySelector(".scroll-right");
+  
+    // Scroll left
+    scrollLeft.addEventListener("click", () => {
+      profileContainer.scrollBy({ left: -300, behavior: "smooth" });
+    });
+  
+    // Scroll right
+    scrollRight.addEventListener("click", () => {
+      profileContainer.scrollBy({ left: 300, behavior: "smooth" });
+    });
+  
+    // Keyboard arrow key scrolling
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        profileContainer.scrollBy({ left: -300, behavior: "smooth" });
+      } else if (event.key === "ArrowRight") {
+        profileContainer.scrollBy({ left: 300, behavior: "smooth" });
+      }
+    });
+});
+
+
