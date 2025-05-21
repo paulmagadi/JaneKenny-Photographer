@@ -262,10 +262,7 @@ header .menu-toggler {
     margin: 0 10px;
     position: relative;
     border-radius: 0 0 8px 8px;
-    border-bottom: 2px solid var(--primary-color);
-    border-left: 2px solid var(--primary-color);
-    border-right: 2px solid var(--primary-color);
-    border-top: 2px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .section-break::after {
@@ -275,7 +272,7 @@ header .menu-toggler {
     top: 0;
     bottom: 0;
     height: 42px;
-    width: 99%;
+    width: 99.5%;
     margin: auto auto;
     background-color: var(--primary-color);
     background-color: rgb(240, 184, 202);
@@ -283,7 +280,7 @@ header .menu-toggler {
     color: white;
     z-index: 1;
     position: absolute;
-    border-radius: 50px;
+    border-radius: 6px;
     font-family: "Tangerine", cursive;
     display: flex;
     justify-content: center;
@@ -294,34 +291,77 @@ header .menu-toggler {
 
 .follow-instagram {
     margin: 3rem 10px;
+    text-align: center;
+}
+
+.follow-instagram h3 {
+    font-family: "Comic Neue", cursive;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.follow-instagram h3+a {
+    padding: 1em;
+    font-family: "Comic Neue", cursive;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.follow-instagram h3+a:hover {
+    text-decoration: underline;
+}
+
+
+.scroll-arrows {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.scroll-arrows .scroll {
+    padding: 5px 12px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border: 1px solid black;
+    color: var(--primary-color);
+    transition: 0.5s ease-in-out;
+    border-radius: 3px;
+}
+
+.scroll-arrows .scroll:hover {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .instagram-gallery {
     height: 200px;
     width: 100%;
     display: flex;
-    /* gap: 1em; */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     position: relative;
     scroll-behavior: smooth;
-    /* padding: .5em; */
+    border-radius: 8px;
 }
 
 .instagram-gallery::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .instagram-image {
     height: 200px;
-    width: auto;
+    width: 200px;
     position: relative;
 }
 
 .instagram-image img {
     height: 100%;
     width: 200px;
+    box-sizing: border-box;
     object-fit: cover;
 }
 
@@ -332,8 +372,7 @@ header .menu-toggler {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--primary-color);
-    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
     font-size: 1rem;
     color: white;
@@ -355,7 +394,8 @@ header .menu-toggler {
 }
 
 .instagram-image:hover>img {
-    scale: 0.9;
+    transform: rotate(5deg);
+    filter: grayscale(1);
     transition: 1s ease-in-out;
 }
 
@@ -368,11 +408,11 @@ header .menu-toggler {
 }
 
 .services-section {
-    margin: 3rem 10px;
+    margin-top: 1.5rem;
 }
 
 .heading {
-    padding: 1em;
+    padding: 0 1em;
     font-size: 2rem;
     font-family: "Poetsen One", sans-serif;
     font-family: "Comic Neue", cursive;
@@ -398,7 +438,7 @@ header .menu-toggler {
 
 .service-description h3 {
     font-family: "Tangerine", cursive;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
 }
 
@@ -482,8 +522,6 @@ header .menu-toggler {
 .why-me-section>div:nth-child(2) img {
     width: 80%;
 }
-
-
 
 .why-me-section p {
     line-height: 1.8rem;

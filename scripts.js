@@ -1,5 +1,6 @@
 const menuToggle = document.querySelector('.menu-toggler');
 const navMenu = document.querySelector('nav');
+const navLinks = document.querySelectorAll('nav a');
 
 menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('show');
@@ -9,7 +10,16 @@ menuToggle.addEventListener('click', () => {
     } else {
         menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
     }
+
 })
+
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        })
+    });
 
 const profileImageContainer = document.querySelector('.profile-image');
 let profileImages = document.querySelectorAll('.profile-image img');
@@ -51,4 +61,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
+const whyMeImagesContainer = document.querySelector('.why-me-images');
+let whyMeImages = document.querySelectorAll('.why-me-images img');
+let imageIndex = 0;
+showImages();
+function showImages(){
+    for (image = 0; image < whyMeImages.length; image++) {
+    whyMeImages[image].style.display = "none";
+  }
+  imageIndex++;
+  if (imageIndex > whyMeImages.length) {imageIndex = 1}
+  whyMeImages[imageIndex-1].style.display = "block";
+  setTimeout(showImages, 4000);
+}
