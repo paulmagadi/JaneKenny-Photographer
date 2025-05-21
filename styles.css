@@ -9,6 +9,10 @@
     --bg-color: rgb(242, 242, 242);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: rgb(242, 242, 242);
 }
@@ -208,6 +212,7 @@ header .menu-toggler {
     position: relative;
     overflow: hidden;
     border-radius: 0 8px 0 0;
+    z-index: 0;
 }
 
 .profile-image img {
@@ -366,6 +371,9 @@ header .menu-toggler {
     .profile-image {
         width: 100%;
         padding-top: 2em;
+        background-color: rgb(240, 184, 202);
+        border-radius: 0;
+        z-index: 0;
     }
 
     .profile-image img {
