@@ -130,7 +130,8 @@ header .menu-toggler {
 
 .introduction .name span {
     color: var(--primary-color);
-    font-family: "Poetsen One", sans-serif;
+    font-family: "Tangerine", cursive;
+    font-size: 3rem;
 }
 
 .introduction .profession {
@@ -283,6 +284,8 @@ header .menu-toggler {
 .heading {
     padding: 1em;
     font-size: 2rem;
+    font-family: "Poetsen One", sans-serif;
+    color: var(--primary-color);
 }
 
 .services-container .service {
@@ -297,6 +300,28 @@ header .menu-toggler {
 
 .service-description {
     width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-description h3 {
+    font-family: "Tangerine", cursive;
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.service-description small {
+    margin: 1.5em 0;
+    color: var(--primary-color);
+    font-family: "Tangerine", cursive;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.service-description p {
+    font-family: "Philosopher", sans-serif;
+    line-height: 1.5rem;
 }
 
 .service-image {
@@ -315,7 +340,6 @@ header .menu-toggler {
         width: 90%;
     }
 }
-
 
 @media (max-width: 1000px) {
     header {
@@ -380,8 +404,13 @@ header .menu-toggler {
         width: 70%;
     }
 
+    .heading {
+        padding: 1em 10px;
+    }
+
     .services-container .service {
         flex-direction: column;
+        padding: 1em 0 0 1em;
     }
 
     .service-description {
