@@ -43,6 +43,11 @@ header {
     font-family: "Comic Neue", cursive;
 }
 
+.logo a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
 nav ul {
     list-style: none;
 }

@@ -1,22 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Sample photo data - in a real app, you might fetch this from an API
     const photos = [
         { id: 1, src: 'images/nature/1.jpg', category: 'nature', title: 'Nature Landscape' },
-        { id: 2, src: 'https://source.unsplash.com/random/600x600/?portrait', category: 'portrait', title: 'Portrait Photography' },
-        { id: 3, src: 'https://source.unsplash.com/random/600x600/?city', category: 'urban', title: 'Urban Scene' },
-        { id: 4, src: 'https://source.unsplash.com/random/600x600/?travel', category: 'travel', title: 'Travel Destination' },
-        { id: 5, src: 'https://source.unsplash.com/random/600x600/?mountain', category: 'nature', title: 'Mountain View' },
-        { id: 6, src: 'https://source.unsplash.com/random/600x600/?woman', category: 'portrait', title: 'Female Portrait' },
-        { id: 7, src: 'https://source.unsplash.com/random/600x600/?building', category: 'urban', title: 'City Architecture' },
-        { id: 8, src: 'https://source.unsplash.com/random/600x600/?beach', category: 'travel', title: 'Beach Vacation' },
-        { id: 9, src: 'https://source.unsplash.com/random/600x600/?forest', category: 'nature', title: 'Forest Path' },
-        { id: 10, src: 'https://source.unsplash.com/random/600x600/?man', category: 'portrait', title: 'Male Portrait' },
-        { id: 11, src: 'https://source.unsplash.com/random/600x600/?street', category: 'urban', title: 'Street Photography' },
-        { id: 12, src: 'https://source.unsplash.com/random/600x600/?europe', category: 'travel', title: 'European City' },
-        { id: 13, src: 'https://source.unsplash.com/random/600x600/?waterfall', category: 'nature', title: 'Waterfall' },
-        { id: 14, src: 'https://source.unsplash.com/random/600x600/?child', category: 'portrait', title: 'Child Portrait' },
-        { id: 15, src: 'https://source.unsplash.com/random/600x600/?night', category: 'urban', title: 'Night City' },
-        { id: 16, src: 'https://source.unsplash.com/random/600x600/?asia', category: 'travel', title: 'Asian Destination' },
+        { id: 2, src: 'images/nature/2.jpg', category: 'portrait', title: 'Portrait Photography' },
+        { id: 3, src: 'images/nature/1.jpg', category: 'urban', title: 'Urban Scene' },
+        { id: 4, src: 'images/nature/1.jpg', category: 'travel', title: 'Travel Destination' },
+        { id: 5, src: 'images/nature/2.jpg', category: 'nature', title: 'Mountain View' },
+        { id: 6, src: 'images/nature/1.jpg', category: 'portrait', title: 'Female Portrait' },
+        { id: 7, src: 'images/nature/1.jpg', category: 'urban', title: 'City Architecture' },
+        { id: 8, src: 'images/nature/2.jpg', category: 'travel', title: 'Beach Vacation' },
+        { id: 9, src: 'images/nature/1.jpg', category: 'nature', title: 'Forest Path' },
+        { id: 10, src: 'images/nature/1.jpg', category: 'portrait', title: 'Male Portrait' },
+        { id: 11, src: 'images/nature/2.jpg', category: 'urban', title: 'Street Photography' },
+        { id: 12, src: 'images/nature/1.jpg', category: 'travel', title: 'European City' },
+        { id: 13, src: 'images/nature/2.jpg', category: 'nature', title: 'Waterfall' },
+        { id: 14, src: 'images/nature/1.jpg', category: 'portrait', title: 'Child Portrait' },
+        { id: 15, src: 'images/nature/1.jpg', category: 'urban', title: 'Night City' },
+        { id: 16, src: 'images/nature/2.jpg', category: 'travel', title: 'Asian Destination' },
         { id: 17, src: 'images/jenny/1.png', category: 'Jenny', title: 'Jenny' },
         { id: 18, src: 'images/jenny/2.png', category: 'Jenny', title: 'Jenny' },
         { id: 19, src: 'images/jenny/3.png', category: 'Jenny', title: 'Jenny' },
@@ -32,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // DOM Elements
     const gallery = document.getElementById('gallery');
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
+    const prevPageBtn = document.getElementById('prev-btn');
+    const nextPageBtn = document.getElementById('next-btn');
     const pageNumbers = document.getElementById('page-numbers');
 
     // Pagination variables
@@ -84,18 +83,18 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (totalPages <= 1) {
             pageNumbers.style.display = 'none';
-            prevBtn.disabled = true;
-            nextBtn.disabled = true;
+            prevPageBtn.disabled = true;
+            nextPageBtn.disabled = true;
             return;
         }
         
         pageNumbers.style.display = 'flex';
         
         // Previous button state
-        prevBtn.disabled = currentPage === 1;
+        prevPageBtn.disabled = currentPage === 1;
         
         // Next button state
-        nextBtn.disabled = currentPage === totalPages;
+        nextPageBtn.disabled = currentPage === totalPages;
         
         // Page numbers
         for (let i = 1; i <= totalPages; i++) {
@@ -139,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Previous button
-        prevBtn.addEventListener('click', () => {
+        prevPageBtn.addEventListener('click', () => {
             if (currentPage > 1) {
                 currentPage--;
                 renderGallery();
@@ -149,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Next button
-        nextBtn.addEventListener('click', () => {
+        nextPageBtn.addEventListener('click', () => {
             const totalPages = Math.ceil(filteredPhotos.length / itemsPerPage);
             if (currentPage < totalPages) {
                 currentPage++;
