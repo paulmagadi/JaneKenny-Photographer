@@ -536,6 +536,48 @@ header .menu-toggler {
     line-height: 1.8rem;
 }
 
+footer {
+    padding: 3em 2em;
+    margin: 0 10px;
+    font-family: "Comic Neue", cursive;
+    background-color: rgb(230, 230, 230);
+    border-radius: 8px 8px 0 0;
+}
+
+.footer-links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: .5em 0;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer hr {
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 1em 0;
+    border: none;
+}
+
+footer .foot {
+    text-align: center;
+}
+
 @media (max-width: 1100px) {
     .profile-image img {
         width: 90%;
@@ -642,5 +684,9 @@ header .menu-toggler {
 
     .scroll-arrows {
         justify-content: space-between;
+    }
+
+    .footer-links-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
