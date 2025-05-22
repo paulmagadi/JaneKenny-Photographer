@@ -26,11 +26,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 2em;
+    padding: 10px 2em;
     margin: 0 10px;
     background-color: rgb(230, 230, 230);
     z-index: 100;
     border-radius: 0 0 8px 8px;
+    position: sticky;
+    top: 0;
 }
 
 .logo {
@@ -39,10 +41,6 @@ header {
     color: var(--primary-color);
     font-family: "Poetsen One", sans-serif;
     font-family: "Comic Neue", cursive;
-}
-
-.logo span {
-    color: black;
 }
 
 nav ul {
@@ -108,7 +106,7 @@ header .menu-toggler {
     justify-content: space-between;
     gap: 1em;
     margin: 0 10px;
-    margin-top: 1em;
+    margin-top: 10px;
     background-color: rgb(230, 230, 230);
     position: relative;
     z-index: 0;
@@ -288,7 +286,6 @@ header .menu-toggler {
     font-size: 1.8rem;
 }
 
-
 .follow-instagram {
     margin: 3rem 10px;
     text-align: center;
@@ -312,7 +309,6 @@ header .menu-toggler {
 .follow-instagram h3+a:hover {
     text-decoration: underline;
 }
-
 
 .scroll-arrows {
     display: flex;
@@ -408,7 +404,7 @@ header .menu-toggler {
 }
 
 .services-section {
-    margin-top: 1.5rem;
+    margin: 1.5rem 10px;
 }
 
 .heading {
@@ -424,7 +420,6 @@ header .menu-toggler {
     justify-content: space-between;
     gap: 1em;
     margin-top: 1em;
-    padding: 1em 0 0 2em;
     background-color: rgb(230, 230, 230);
     border-radius: 8px
 }
@@ -434,6 +429,8 @@ header .menu-toggler {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1em;
+    padding-left: 2em;
 }
 
 .service-description h3 {
@@ -459,13 +456,16 @@ header .menu-toggler {
 
 .service-image {
     width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .service-image img {
     width: 100%;
+    height: 100%;
     max-height: 350px;
     object-fit: cover;
-    object-position: top;
 }
 
 .why-me-section {
@@ -474,6 +474,7 @@ header .menu-toggler {
     color: rgb(242, 242, 242);
     padding: 1em 2em;
     margin: 0 10px;
+    margin-bottom: 2em;
     border-radius: 8px;
     font-family: "Comic Neue", cursive;
     display: flex;
@@ -536,7 +537,7 @@ header .menu-toggler {
 @media (max-width: 1000px) {
     header {
         padding: 1em 1em;
-        position: relative;
+        border-radius: 0;
     }
 
     nav {
@@ -556,7 +557,7 @@ header .menu-toggler {
         top: 100%;
         right: 0;
         min-width: 50%;
-        border-radius: 0 0 8px 0;
+        border-radius: 0 0 0 8px;
         animation: show-nav 0.5s ease-in-out;
     }
 
@@ -602,11 +603,11 @@ header .menu-toggler {
 
     .services-container .service {
         flex-direction: column;
-        padding: 1em 0 0 1em;
     }
 
     .service-description {
         width: 100%;
+        padding: 1em;
     }
 
     .service-image {
