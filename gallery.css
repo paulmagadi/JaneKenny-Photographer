@@ -48,7 +48,9 @@ h1 {
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.3s ease;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: "Comic Neue", cursive;
 }
 
 .filter-btn:hover {
