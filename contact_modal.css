@@ -1,0 +1,116 @@
+.contact-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.416);
+    z-index: 1000;
+    display: none;
+}
+
+.contact-modal-content {
+    background-color: rgb(242, 242, 242);
+    margin: 10% auto;
+    padding: 1em;
+    border-radius: 8px;
+    width: 95%;
+    max-width: 500px;
+    transform: scale(0.8);
+    opacity: 0;
+    animation: scaleUp 0.4s forwards;
+}
+
+@keyframes scaleUp {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.contact-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-family: "Comic Neue", cursive;
+}
+
+.close-contact-modal {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-contact-modal:hover {
+    color: rgb(167, 25, 25);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 1.5px solid var(--primary-color);
+    border: none;
+}
+
+.contact-form button {
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    transform: scale(0.97);
+}
+
+/* Toast Notification */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 1rem;
+  position: fixed;
+  z-index: 2000;
+  top: 30px;
+  right: 30px;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -149,12 +149,15 @@ header .menu-toggler {
 .introduction .description {
     color: rgb(25, 25, 25);
     line-height: 1.5rem;
-    font-family: "Philosopher", sans-serif;
     font-family: "Comic Neue", cursive;
 }
 
 .button-group {
     margin: 2em 0;
+}
+
+.lets-talk-btn {
+    cursor: pointer;
 }
 
 .primary-btn {
@@ -547,6 +550,7 @@ header .menu-toggler {
 
     nav {
         display: none;
+        padding: 1em;
     }
 
     header .menu-toggler {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jane Kenny - Photographer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact_modal.css">
     <link rel="stylesheet" href="gallery.css">
 
 
@@ -45,9 +46,7 @@
                     <a href="gallery.html">
                         <li>Gallery</li>
                     </a>
-                    <a href="">
-                        <li>Contact</li>
-                    </a>
+                    <li class="lets-talk-btn">Contact</li>
                 </ul>
             </nav>
             <div class="whatsapp-link">
@@ -82,9 +81,27 @@
                 <button id="next-btn">Next <i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
+
+        <div class="contact-modal">
+            <div class="contact-modal-content">
+                <div class="contact-modal-header">
+                    <h3>Contact me</h3>
+                    <span class="close-contact-modal"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="contact-modal-body">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="toast" class="toast">Message sent successfully!</div>
     </div>
 
-    <script src="navigation.js"></script>
+    <script src="universal.js"></script>
     <script src="gallery.js"></script>
 </body>
 

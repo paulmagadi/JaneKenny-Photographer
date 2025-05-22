@@ -1,5 +1,3 @@
-
-
 const profileImageContainer = document.querySelector('.profile-image');
 let profileImages = document.querySelectorAll('.profile-image img');
 let slideIndex = 0;

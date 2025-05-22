@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jane Kenny - Photographer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact_modal.css">
+
     <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -42,13 +44,12 @@
                     <a href="gallery.html">
                         <li>Gallery</li>
                     </a>
-                    <a href="">
-                        <li>Contact</li>
-                    </a>
+                    <li class="lets-talk-btn">Contact</li>
                 </ul>
             </nav>
             <div class="whatsapp-link">
-                <a href="https://wa.me/demo" target="_blank" rel="noopener noreferre" title="Lets talk on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://wa.me/demo" target="_blank" rel="noopener noreferre" title="Lets talk on WhatsApp"><i
+                        class="fa-brands fa-whatsapp"></i></a>
             </div>
             <div class="menu-toggler">
                 <i class="fa-solid fa-bars"></i>
@@ -66,8 +67,9 @@
                 <p class="description">~ Every shot tells a story—let’s create something beautiful together.</p>
 
                 <div class="button-group">
-                    <button type="button" class="hire-me primary-btn">Let's talk</button>
-                    <a href="gallery.html" title="See my past works"><button type="button" class="gallery outlined-btn">My Galley</button></a>
+                    <button type="button" class="lets-talk-btn primary-btn">Let's talk</button>
+                    <a href="gallery.html" title="See my past works"><button type="button"
+                            class="gallery outlined-btn">My Galley</button></a>
                 </div>
 
                 <div class="social-icons" aria-label="Social Media Links">
@@ -281,9 +283,27 @@
 
         </div>
 
+        <div class="contact-modal">
+            <div class="contact-modal-content">
+                <div class="contact-modal-header">
+                    <h3>Contact me</h3>
+                    <span class="close-contact-modal"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="contact-modal-body">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="toast" class="toast">Message sent successfully!</div>
+
     </div>
 
-    <script src="navigation.js"></script>
+    <script src="universal.js"></script>
     <script src="scripts.js"></script>
 </body>
 
