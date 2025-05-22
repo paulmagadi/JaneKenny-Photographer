@@ -322,7 +322,7 @@ header .menu-toggler {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .scroll-arrows .scroll {
@@ -638,5 +638,9 @@ header .menu-toggler {
 @media (max-width: 460px) {
     header nav.show {
         min-width: 80%;
+    }
+
+    .scroll-arrows {
+        justify-content: space-between;
     }
 }

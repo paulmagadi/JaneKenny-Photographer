@@ -30,6 +30,7 @@ window.addEventListener('click', (e) => {
 
 // Modal logic
 const letsTalkButtons = document.querySelectorAll('.lets-talk-btn');
+const letsTalkButton = document.getElementById('lets-talk-btn');
 const modal = document.querySelector('.contact-modal');
 const closeModal = document.querySelector('.close-contact-modal');
 
@@ -42,8 +43,8 @@ letsTalkButtons.forEach(button => {
 
 
 if(closeModal){
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
+    closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
 });
 }
 
@@ -82,3 +83,8 @@ contactForm.addEventListener('submit', function(e) {
   contactForm.reset();
 });
 }
+
+letsTalkButton.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+    menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+})
