@@ -1,3 +1,4 @@
+const header = document.querySelector('header');
 const menuToggle = document.querySelector('.menu-toggler');
 const navMenu = document.querySelector('nav');
 const navLinks = document.querySelectorAll('nav a');
@@ -7,8 +8,10 @@ menuToggle.addEventListener('click', () => {
 
     if(navMenu.classList.contains('show')) {
          menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+         header.style.borderBottomRightRadius = "0";
     } else {
         menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+         header.style.borderBottomRightRadius = "8px";
     }
 
 })
